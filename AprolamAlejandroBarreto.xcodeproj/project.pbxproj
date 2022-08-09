@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A913938928A301D3005D96C2 /* BabyEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A913938728A301D3005D96C2 /* BabyEntity+CoreDataClass.swift */; };
+		A913938A28A301D3005D96C2 /* BabyEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A913938828A301D3005D96C2 /* BabyEntity+CoreDataProperties.swift */; };
+		A913939128A30274005D96C2 /* Baby.swift in Sources */ = {isa = PBXBuildFile; fileRef = A913939028A30274005D96C2 /* Baby.swift */; };
+		A913939328A30290005D96C2 /* BabyPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A913939228A30290005D96C2 /* BabyPresenter.swift */; };
 		A93A776F28A2B24B0012E42A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93A776E28A2B24B0012E42A /* AppDelegate.swift */; };
 		A93A777128A2B24B0012E42A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93A777028A2B24B0012E42A /* SceneDelegate.swift */; };
 		A93A777328A2B24B0012E42A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93A777228A2B24B0012E42A /* ViewController.swift */; };
@@ -14,9 +18,14 @@
 		A93A777928A2B24B0012E42A /* AprolamAlejandroBarreto.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A93A777728A2B24B0012E42A /* AprolamAlejandroBarreto.xcdatamodeld */; };
 		A93A777B28A2B24D0012E42A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A93A777A28A2B24D0012E42A /* Assets.xcassets */; };
 		A93A777E28A2B24D0012E42A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93A777C28A2B24D0012E42A /* LaunchScreen.storyboard */; };
+		A93A778628A2C8D70012E42A /* AddBabyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93A778528A2C8D70012E42A /* AddBabyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A913938728A301D3005D96C2 /* BabyEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BabyEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A913938828A301D3005D96C2 /* BabyEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BabyEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A913939028A30274005D96C2 /* Baby.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baby.swift; sourceTree = "<group>"; };
+		A913939228A30290005D96C2 /* BabyPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyPresenter.swift; sourceTree = "<group>"; };
 		A93A776B28A2B24B0012E42A /* AprolamAlejandroBarreto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AprolamAlejandroBarreto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A93A776E28A2B24B0012E42A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A93A777028A2B24B0012E42A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +35,7 @@
 		A93A777A28A2B24D0012E42A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A93A777D28A2B24D0012E42A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A93A777F28A2B24D0012E42A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A93A778528A2C8D70012E42A /* AddBabyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBabyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,9 +49,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A913938B28A3021D005D96C2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A913939028A30274005D96C2 /* Baby.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A913938C28A30229005D96C2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A913938D28A30231005D96C2 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				A913939228A30290005D96C2 /* BabyPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		A93A776228A2B24B0012E42A = {
 			isa = PBXGroup;
 			children = (
+				A913938728A301D3005D96C2 /* BabyEntity+CoreDataClass.swift */,
+				A913938828A301D3005D96C2 /* BabyEntity+CoreDataProperties.swift */,
 				A93A776D28A2B24B0012E42A /* AprolamAlejandroBarreto */,
 				A93A776C28A2B24B0012E42A /* Products */,
 			);
@@ -58,8 +93,12 @@
 		A93A776D28A2B24B0012E42A /* AprolamAlejandroBarreto */ = {
 			isa = PBXGroup;
 			children = (
+				A913938D28A30231005D96C2 /* Presenter */,
+				A913938C28A30229005D96C2 /* View */,
+				A913938B28A3021D005D96C2 /* Model */,
 				A93A776E28A2B24B0012E42A /* AppDelegate.swift */,
 				A93A777028A2B24B0012E42A /* SceneDelegate.swift */,
+				A93A778528A2C8D70012E42A /* AddBabyViewController.swift */,
 				A93A777228A2B24B0012E42A /* ViewController.swift */,
 				A93A777428A2B24B0012E42A /* Main.storyboard */,
 				A93A777A28A2B24D0012E42A /* Assets.xcassets */,
@@ -143,8 +182,13 @@
 			files = (
 				A93A777328A2B24B0012E42A /* ViewController.swift in Sources */,
 				A93A776F28A2B24B0012E42A /* AppDelegate.swift in Sources */,
+				A913938928A301D3005D96C2 /* BabyEntity+CoreDataClass.swift in Sources */,
+				A913939128A30274005D96C2 /* Baby.swift in Sources */,
+				A913939328A30290005D96C2 /* BabyPresenter.swift in Sources */,
+				A93A778628A2C8D70012E42A /* AddBabyViewController.swift in Sources */,
 				A93A777128A2B24B0012E42A /* SceneDelegate.swift in Sources */,
 				A93A777928A2B24B0012E42A /* AprolamAlejandroBarreto.xcdatamodeld in Sources */,
+				A913938A28A301D3005D96C2 /* BabyEntity+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,7 +353,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -336,7 +380,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
