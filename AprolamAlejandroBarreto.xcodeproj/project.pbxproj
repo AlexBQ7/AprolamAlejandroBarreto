@@ -22,6 +22,7 @@
 		A93A777B28A2B24D0012E42A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A93A777A28A2B24D0012E42A /* Assets.xcassets */; };
 		A93A777E28A2B24D0012E42A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93A777C28A2B24D0012E42A /* LaunchScreen.storyboard */; };
 		A93A778628A2C8D70012E42A /* AddBabyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93A778528A2C8D70012E42A /* AddBabyViewController.swift */; };
+		A99870EB28A408DC00280B61 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99870EA28A408DC00280B61 /* News.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		A93A777D28A2B24D0012E42A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A93A777F28A2B24D0012E42A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A93A778528A2C8D70012E42A /* AddBabyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBabyViewController.swift; sourceTree = "<group>"; };
+		A99870EA28A408DC00280B61 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				A913939028A30274005D96C2 /* Baby.swift */,
+				A99870EA28A408DC00280B61 /* News.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				A93A776F28A2B24B0012E42A /* AppDelegate.swift in Sources */,
 				A913938928A301D3005D96C2 /* BabyEntity+CoreDataClass.swift in Sources */,
 				A913939128A30274005D96C2 /* Baby.swift in Sources */,
+				A99870EB28A408DC00280B61 /* News.swift in Sources */,
 				4D0DE2E128A3374A006D9AB2 /* AlertController.swift in Sources */,
 				A913939328A30290005D96C2 /* BabyPresenter.swift in Sources */,
 				A93A778628A2C8D70012E42A /* AddBabyViewController.swift in Sources */,

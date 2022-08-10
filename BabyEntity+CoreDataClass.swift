@@ -2,7 +2,7 @@
 //  BabyEntity+CoreDataClass.swift
 //  AprolamAlejandroBarreto
 //
-//  Created by Alejandro on 09/08/22.
+//  Created by Alejandro Barreto on 09/08/22.
 //
 //
 

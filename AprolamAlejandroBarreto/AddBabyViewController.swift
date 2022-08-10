@@ -37,7 +37,11 @@ class AddBabyViewController: UIViewController {
         presenter.getBaby()
     }
     
-    @objc func showImageOptions(sender: UITapGestureRecognizer) {
+    @IBAction func takePic(_ sender: Any) {
+        showImageOptions(sender: babyImage!)
+    }
+    
+    @objc func showImageOptions(sender: Any) {
         let alert = UIAlertController(title: "Imagen del bebé", message: "Elige una imagen para el bebé", preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "Cámara", style: .default, handler: { (handler) in
             self.getImage(fromSourceType: .camera)
@@ -115,13 +119,21 @@ class AddBabyViewController: UIViewController {
     }
     
     @IBAction func clearAll(_ sender: Any) {
-        self.presenter.deleteBaby()
-        do {
-            let data = try self.presenter.context.fetch(BabyEntity.fetchRequest())
-            print(data)
-        } catch {
-            
+        if baby_data != nil {
+            presenter.getBaby()
+        } else {
+            nameField.text = ""
+            dateField.text = "00/00/0000"
+            boyButton.backgroundColor = .white
+            girlButton.backgroundColor = .white
+            clearData()
         }
+    }
+    
+    private func clearData() {
+        baby_image = nil
+        baby_birthday = nil
+        baby_gender = nil
     }
     
     @IBAction func saveBaby(_ sender: Any) {
@@ -144,7 +156,6 @@ class AddBabyViewController: UIViewController {
         }
         
         let baby = BabyItem(name: name, birthday: baby_birthday, image: image, baby_gender: baby_gender)
-        print("Test \(baby_data)")
         
         if let data = baby_data {
             if presenter.updateBaby(baby: data, newData: baby) {
@@ -167,7 +178,6 @@ class AddBabyViewController: UIViewController {
 extension AddBabyViewController: BabyPresenterDelegate {
     func didGetBaby(baby: BabyEntity?) {
         guard let baby = baby else {
-            print("No hay bebé")
             return
         }
         babyImage.image = baby.image
@@ -175,14 +185,15 @@ extension AddBabyViewController: BabyPresenterDelegate {
         dateField.text = baby.birthday.getFormattedDate(format: "dd/MM/yyyy")
         if baby.gender {
             boyButton.backgroundColor = UIColor(named: "secondary_color")
+            girlButton.backgroundColor = .white
         } else {
             girlButton.backgroundColor = UIColor(named: "secondary_color")
+            boyButton.backgroundColor = .white
         }
         baby_image = baby.image
         baby_birthday = baby.birthday
         baby_gender = baby.gender == true ? .boy : .girl
         baby_data = baby
-        print("Hola: \(baby_data!)")
     }
     
     func presentAlert(title: String, message: String) {
