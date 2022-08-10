@@ -8,7 +8,7 @@
 
 import Foundation
 import CoreData
-
+import UIKit
 
 extension BabyEntity {
 
@@ -16,10 +16,10 @@ extension BabyEntity {
         return NSFetchRequest<BabyEntity>(entityName: "BabyEntity")
     }
 
-    @NSManaged public var birthday: Date?
-    @NSManaged public var name: String?
+    @NSManaged public var birthday: Date
+    @NSManaged public var name: String
     @NSManaged public var gender: Bool
-
+    @NSManaged public var image: UIImage
 }
 
 extension BabyEntity : Identifiable {

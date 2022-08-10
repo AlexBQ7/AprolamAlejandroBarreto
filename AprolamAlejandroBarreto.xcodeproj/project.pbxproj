@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D0DE2DD28A32FE6006D9AB2 /* DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0DE2DC28A32FE6006D9AB2 /* DateFormat.swift */; };
+		4D0DE2DF28A336AC006D9AB2 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0DE2DE28A336AC006D9AB2 /* Enums.swift */; };
+		4D0DE2E128A3374A006D9AB2 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0DE2E028A3374A006D9AB2 /* AlertController.swift */; };
 		A913938928A301D3005D96C2 /* BabyEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A913938728A301D3005D96C2 /* BabyEntity+CoreDataClass.swift */; };
 		A913938A28A301D3005D96C2 /* BabyEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A913938828A301D3005D96C2 /* BabyEntity+CoreDataProperties.swift */; };
 		A913939128A30274005D96C2 /* Baby.swift in Sources */ = {isa = PBXBuildFile; fileRef = A913939028A30274005D96C2 /* Baby.swift */; };
@@ -22,6 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D0DE2DC28A32FE6006D9AB2 /* DateFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormat.swift; sourceTree = "<group>"; };
+		4D0DE2DE28A336AC006D9AB2 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		4D0DE2E028A3374A006D9AB2 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		A913938728A301D3005D96C2 /* BabyEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BabyEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		A913938828A301D3005D96C2 /* BabyEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BabyEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A913939028A30274005D96C2 /* Baby.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baby.swift; sourceTree = "<group>"; };
@@ -49,6 +55,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D0DE2DB28A32FD1006D9AB2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4D0DE2DC28A32FE6006D9AB2 /* DateFormat.swift */,
+				4D0DE2DE28A336AC006D9AB2 /* Enums.swift */,
+				4D0DE2E028A3374A006D9AB2 /* AlertController.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		A913938B28A3021D005D96C2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +109,7 @@
 		A93A776D28A2B24B0012E42A /* AprolamAlejandroBarreto */ = {
 			isa = PBXGroup;
 			children = (
+				4D0DE2DB28A32FD1006D9AB2 /* Utils */,
 				A913938D28A30231005D96C2 /* Presenter */,
 				A913938C28A30229005D96C2 /* View */,
 				A913938B28A3021D005D96C2 /* Model */,
@@ -184,11 +201,14 @@
 				A93A776F28A2B24B0012E42A /* AppDelegate.swift in Sources */,
 				A913938928A301D3005D96C2 /* BabyEntity+CoreDataClass.swift in Sources */,
 				A913939128A30274005D96C2 /* Baby.swift in Sources */,
+				4D0DE2E128A3374A006D9AB2 /* AlertController.swift in Sources */,
 				A913939328A30290005D96C2 /* BabyPresenter.swift in Sources */,
 				A93A778628A2C8D70012E42A /* AddBabyViewController.swift in Sources */,
 				A93A777128A2B24B0012E42A /* SceneDelegate.swift in Sources */,
 				A93A777928A2B24B0012E42A /* AprolamAlejandroBarreto.xcdatamodeld in Sources */,
+				4D0DE2DD28A32FE6006D9AB2 /* DateFormat.swift in Sources */,
 				A913938A28A301D3005D96C2 /* BabyEntity+CoreDataProperties.swift in Sources */,
+				4D0DE2DF28A336AC006D9AB2 /* Enums.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
