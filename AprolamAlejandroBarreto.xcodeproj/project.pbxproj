@@ -87,9 +87,11 @@
 		4D7D499128A5EB8E002A9B18 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A93A778528A2C8D70012E42A /* AddBabyViewController.swift */,
 				4D7D499228A5EBA9002A9B18 /* NewsCollectionViewCell.swift */,
 				4D7D499328A5EBA9002A9B18 /* NewsCollectionViewCell.xib */,
 				4D7D499928A6010D002A9B18 /* NewsViewController.swift */,
+				A93A777228A2B24B0012E42A /* ViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -123,10 +125,6 @@
 		A93A776228A2B24B0012E42A = {
 			isa = PBXGroup;
 			children = (
-				4D7D49A128A6054C002A9B18 /* NewsL+CoreDataClass.swift */,
-				4D7D49A228A6054C002A9B18 /* NewsL+CoreDataProperties.swift */,
-				A913938728A301D3005D96C2 /* BabyEntity+CoreDataClass.swift */,
-				A913938828A301D3005D96C2 /* BabyEntity+CoreDataProperties.swift */,
 				A93A776D28A2B24B0012E42A /* AprolamAlejandroBarreto */,
 				A93A776C28A2B24B0012E42A /* Products */,
 			);
@@ -143,22 +141,32 @@
 		A93A776D28A2B24B0012E42A /* AprolamAlejandroBarreto */ = {
 			isa = PBXGroup;
 			children = (
+				A93A776E28A2B24B0012E42A /* AppDelegate.swift */,
+				A93A777028A2B24B0012E42A /* SceneDelegate.swift */,
 				4D7D499628A5EC78002A9B18 /* API */,
 				4D7D499128A5EB8E002A9B18 /* View */,
 				4D0DE2DB28A32FD1006D9AB2 /* Utils */,
 				A913938D28A30231005D96C2 /* Presenter */,
 				A913938B28A3021D005D96C2 /* Model */,
-				A93A776E28A2B24B0012E42A /* AppDelegate.swift */,
-				A93A777028A2B24B0012E42A /* SceneDelegate.swift */,
-				A93A778528A2C8D70012E42A /* AddBabyViewController.swift */,
-				A93A777228A2B24B0012E42A /* ViewController.swift */,
+				A9C0383B28A6AD88005E09A4 /* CoreData */,
 				A93A777428A2B24B0012E42A /* Main.storyboard */,
-				A93A777A28A2B24D0012E42A /* Assets.xcassets */,
 				A93A777C28A2B24D0012E42A /* LaunchScreen.storyboard */,
+				A93A777A28A2B24D0012E42A /* Assets.xcassets */,
 				A93A777F28A2B24D0012E42A /* Info.plist */,
 				A93A777728A2B24B0012E42A /* AprolamAlejandroBarreto.xcdatamodeld */,
 			);
 			path = AprolamAlejandroBarreto;
+			sourceTree = "<group>";
+		};
+		A9C0383B28A6AD88005E09A4 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				A913938828A301D3005D96C2 /* BabyEntity+CoreDataProperties.swift */,
+				A913938728A301D3005D96C2 /* BabyEntity+CoreDataClass.swift */,
+				4D7D49A228A6054C002A9B18 /* NewsL+CoreDataProperties.swift */,
+				4D7D49A128A6054C002A9B18 /* NewsL+CoreDataClass.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

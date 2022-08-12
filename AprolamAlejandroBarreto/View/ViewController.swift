@@ -20,13 +20,5 @@ class ViewController: UIViewController {
     @IBAction func newsAction(_ sender: Any) {
         performSegue(withIdentifier: "newsSegue", sender: self)
     }
-    @IBAction func getNews(_ sender: Any) {
-        APIProvider.shared.getNews {
-            response in
-            
-        } failure: { error in
-            print(error)
-        }
-    }
 }
 
