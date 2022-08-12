@@ -6,7 +6,16 @@
         <attribute name="image" attributeType="Transformable" valueTransformerName="" customClassName="UIImage"/>
         <attribute name="name" attributeType="String"/>
     </entity>
+    <entity name="NewsL" representedClassName="NewsL" syncable="YES">
+        <attribute name="descriptionN" optional="YES" attributeType="String"/>
+        <attribute name="image" optional="YES" attributeType="String"/>
+        <attribute name="published_at" optional="YES" attributeType="String"/>
+        <attribute name="source" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="url" optional="YES" attributeType="String"/>
+    </entity>
     <elements>
         <element name="BabyEntity" positionX="-63" positionY="-18" width="128" height="89"/>
+        <element name="NewsL" positionX="-63" positionY="9" width="128" height="119"/>
     </elements>
 </model>

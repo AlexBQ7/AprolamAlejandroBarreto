@@ -17,5 +17,8 @@ class ViewController: UIViewController {
         performSegue(withIdentifier: "addBaby", sender: self)
     }
     
+    @IBAction func newsAction(_ sender: Any) {
+        
+    }
 }
 

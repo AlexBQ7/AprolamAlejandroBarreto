@@ -14,9 +14,15 @@ struct News: Codable {
     let url: String
     let image: String
     let publishedAt: String
+    let source: Source
 }
 
 struct Article: Codable {
     let totalArticles: Int
     let articles: [News]
+}
+
+struct Source: Codable {
+    let name: String
+    let url: String
 }

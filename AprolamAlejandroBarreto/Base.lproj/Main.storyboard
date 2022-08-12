@@ -6,6 +6,7 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -102,6 +103,9 @@
                                                 </constraints>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="sugerencias"/>
+                                                <connections>
+                                                    <action selector="newsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EPL-c8-iOD"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mi bebé" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mzj-hX-zYx">
                                                 <rect key="frame" x="69.5" y="439" width="61" height="21"/>
@@ -182,6 +186,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <segue destination="FYC-Qh-e0j" kind="show" identifier="addBaby" id="piV-hs-cxa"/>
+                        <segue destination="o2V-Eu-2pd" kind="show" id="jZS-Oj-rdU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -673,6 +678,158 @@
             </objects>
             <point key="canvasLocation" x="1338" y="624"/>
         </scene>
+        <!--News View Controller-->
+        <scene sceneID="u6X-HM-gG2">
+            <objects>
+                <viewController id="o2V-Eu-2pd" customClass="NewsViewController" customModule="AprolamAlejandroBarreto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DTj-KC-OST">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NE7-D8-iLG">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wuF-ID-a2x">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Noticias" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMz-Vm-2uh">
+                                                <rect key="frame" x="20" y="20" width="123" height="38.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=compact-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="black" pointSize="60"/>
+                                                </variation>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="news" translatesAutoresizingMaskIntoConstraints="NO" id="YgP-98-9x8">
+                                                <rect key="frame" x="344" y="20" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="6kq-Jd-hfQ">
+                                                        <variation key="heightClass=compact-widthClass=compact" constant="50"/>
+                                                        <variation key="heightClass=compact-widthClass=regular" constant="70"/>
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="150"/>
+                                                    </constraint>
+                                                    <constraint firstAttribute="height" constant="50" id="tBY-nl-Ufu">
+                                                        <variation key="heightClass=compact-widthClass=compact" constant="50"/>
+                                                        <variation key="heightClass=compact-widthClass=regular" constant="70"/>
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="150"/>
+                                                    </constraint>
+                                                </constraints>
+                                            </imageView>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vbe-ZA-gPZ">
+                                                <rect key="frame" x="20" y="120" width="374" height="678"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JeJ-2D-7Vy">
+                                                    <size key="itemSize" width="128" height="128"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="F1F-Zn-Wwg">
+                                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="wo8-cJ-403">
+                                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </collectionViewCellContentView>
+                                                    </collectionViewCell>
+                                                </cells>
+                                            </collectionView>
+                                        </subviews>
+                                        <color key="backgroundColor" name="add_baby_bg"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="vbe-ZA-gPZ" secondAttribute="bottom" constant="20" id="4sZ-WK-45J">
+                                                <variation key="heightClass=compact-widthClass=compact" constant="10"/>
+                                                <variation key="heightClass=compact-widthClass=regular" constant="20"/>
+                                                <variation key="heightClass=regular-widthClass=compact" constant="20"/>
+                                                <variation key="heightClass=regular-widthClass=regular" constant="40"/>
+                                            </constraint>
+                                            <constraint firstItem="vbe-ZA-gPZ" firstAttribute="leading" secondItem="wuF-ID-a2x" secondAttribute="leading" constant="20" id="4t1-ak-Mdq">
+                                                <variation key="heightClass=compact-widthClass=compact" constant="10"/>
+                                                <variation key="heightClass=compact-widthClass=regular" constant="20"/>
+                                                <variation key="heightClass=regular-widthClass=compact" constant="20"/>
+                                                <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                                            </constraint>
+                                            <constraint firstItem="UMz-Vm-2uh" firstAttribute="leading" secondItem="wuF-ID-a2x" secondAttribute="leading" constant="20" id="65p-AZ-mQE">
+                                                <variation key="heightClass=compact-widthClass=compact" constant="10"/>
+                                                <variation key="heightClass=compact-widthClass=regular" constant="40"/>
+                                                <variation key="heightClass=regular-widthClass=compact" constant="20"/>
+                                                <variation key="heightClass=regular-widthClass=regular" constant="100"/>
+                                            </constraint>
+                                            <constraint firstItem="YgP-98-9x8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="UMz-Vm-2uh" secondAttribute="trailing" constant="20" id="96A-a0-ZZB">
+                                                <variation key="heightClass=compact-widthClass=compact" constant="20"/>
+                                                <variation key="heightClass=compact-widthClass=regular" constant="20"/>
+                                                <variation key="heightClass=regular-widthClass=compact" constant="20"/>
+                                                <variation key="heightClass=regular-widthClass=regular" constant="20"/>
+                                            </constraint>
+                                            <constraint firstItem="UMz-Vm-2uh" firstAttribute="top" secondItem="wuF-ID-a2x" secondAttribute="top" constant="20" id="9iw-gs-hsN">
+                                                <variation key="heightClass=compact-widthClass=compact" constant="10"/>
+                                                <variation key="heightClass=compact-widthClass=regular" constant="40"/>
+                                                <variation key="heightClass=regular-widthClass=compact" constant="20"/>
+                                                <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                                            </constraint>
+                                            <constraint firstItem="vbe-ZA-gPZ" firstAttribute="top" secondItem="YgP-98-9x8" secondAttribute="bottom" constant="50" id="DDs-BE-0gp">
+                                                <variation key="heightClass=compact-widthClass=compact" constant="20"/>
+                                                <variation key="heightClass=compact-widthClass=regular" constant="20"/>
+                                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                                <variation key="heightClass=regular-widthClass=regular" constant="80"/>
+                                            </constraint>
+                                            <constraint firstItem="YgP-98-9x8" firstAttribute="top" secondItem="wuF-ID-a2x" secondAttribute="top" constant="20" id="NDT-s4-YyP">
+                                                <variation key="heightClass=compact-widthClass=compact" constant="10"/>
+                                                <variation key="heightClass=compact-widthClass=regular" constant="20"/>
+                                                <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                                            </constraint>
+                                            <constraint firstAttribute="trailing" secondItem="YgP-98-9x8" secondAttribute="trailing" constant="20" id="l2U-sS-oTA">
+                                                <variation key="heightClass=compact-widthClass=compact" constant="10"/>
+                                                <variation key="heightClass=compact-widthClass=regular" constant="40"/>
+                                                <variation key="heightClass=regular-widthClass=compact" constant="20"/>
+                                                <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                                            </constraint>
+                                            <constraint firstAttribute="trailing" secondItem="vbe-ZA-gPZ" secondAttribute="trailing" constant="20" id="y6P-Cj-nhx">
+                                                <variation key="heightClass=compact-widthClass=compact" constant="10"/>
+                                                <variation key="heightClass=compact-widthClass=regular" constant="20"/>
+                                                <variation key="heightClass=regular-widthClass=compact" constant="20"/>
+                                                <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                                            </constraint>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="wuF-ID-a2x" secondAttribute="bottom" id="SEA-F1-o9G"/>
+                                    <constraint firstItem="wuF-ID-a2x" firstAttribute="centerX" secondItem="NE7-D8-iLG" secondAttribute="centerX" id="gkL-KM-wal"/>
+                                    <constraint firstItem="wuF-ID-a2x" firstAttribute="centerY" secondItem="NE7-D8-iLG" secondAttribute="centerY" id="iPn-R6-okc"/>
+                                    <constraint firstAttribute="trailing" secondItem="wuF-ID-a2x" secondAttribute="trailing" id="kdR-jd-IvO"/>
+                                    <constraint firstItem="wuF-ID-a2x" firstAttribute="top" secondItem="NE7-D8-iLG" secondAttribute="top" id="oqI-Nx-kZU"/>
+                                    <constraint firstItem="wuF-ID-a2x" firstAttribute="leading" secondItem="NE7-D8-iLG" secondAttribute="leading" id="ss2-V2-Be8"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cdk-32-84T"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cdk-32-84T" firstAttribute="trailing" secondItem="NE7-D8-iLG" secondAttribute="trailing" id="OCj-Aj-YVq"/>
+                            <constraint firstItem="NE7-D8-iLG" firstAttribute="leading" secondItem="cdk-32-84T" secondAttribute="leading" id="OYJ-E1-TxM"/>
+                            <constraint firstItem="cdk-32-84T" firstAttribute="bottom" secondItem="NE7-D8-iLG" secondAttribute="bottom" id="VfG-jg-Ruf"/>
+                            <constraint firstItem="NE7-D8-iLG" firstAttribute="top" secondItem="cdk-32-84T" secondAttribute="top" id="tmk-XG-dB6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="cq2-Fx-GeQ"/>
+                    <connections>
+                        <outlet property="newsCollection" destination="vbe-ZA-gPZ" id="shc-Gl-6V3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f2a-jr-Fb9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1099" y="1412"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="dDt-UY-I77">
             <objects>
@@ -699,6 +856,7 @@
         <image name="info" width="40" height="40"/>
         <image name="logo" width="175" height="274"/>
         <image name="mibebe" width="179" height="179"/>
+        <image name="news" width="180" height="180"/>
         <image name="problemas" width="179" height="179"/>
         <image name="sugerencias" width="179" height="179"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
