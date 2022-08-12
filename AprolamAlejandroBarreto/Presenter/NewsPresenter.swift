@@ -32,4 +32,48 @@ class NewsPresenter {
         }
     }
     
+    public func createNews(article: News) {
+        let news = NewsL(context: context)
+        news.title = article.title
+        news.descriptionN = article.description
+        news.image = article.image
+        news.url = article.url
+        news.published_at = article.publishedAt
+        news.source = "\(article.source.name) \(article.source.url)"
+        do {
+            try context.save()
+        } catch {
+            print("Error")
+        }
+    }
+    
+    public func deleteNews(news: NewsL) {
+        context.delete(news)
+        do {
+            try context.save()
+        } catch {
+            print(error)
+        }
+    }
+    
+    public func updateNews() {
+        do {
+            let news = try context.fetch(NewsL.fetchRequest())
+            for item in news {
+                deleteNews(news: item)
+            }
+            APIProvider.shared.getNews {
+                response in
+                for item in response {
+                    self.createNews(article: item)
+                }
+                self.getNews()
+            } failure: { error in
+                print(error ?? "Error obteniendo noticias")
+            }
+        } catch {
+            print("Error")
+        }
+    }
+    
 }
